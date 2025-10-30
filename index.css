@@ -6,11 +6,15 @@
 [data-theme="light"] {
    --color-bg: #ECFDF5;
    --color-fg: #2B283A;
+   --color-main-text: #6B7280;
+   --color-green-text: #10B981;
 }
 
 [data-theme="dark"] {
    --color-bg: #1F2937;
    --color-fg: #FFFFFF;
+   --color-main-text: #D5D4D8;
+   --color-green-text: #4ADF86;
 }
 
 /* Global Styles */
@@ -24,16 +28,30 @@
 body {
     height: 100vh;
     background: #1C1C1C;
-    color: #D5D4D8;
+    color: var(--color-main-text);
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
 }
 
-button, button:hover, button:focus, button:active {
+button, button:hover, button:focus, button:active, input, input:hover, input:focus, input:active {
     outline: none;
     cursor: pointer;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield; /* Standard property for future compatibility */
+}
+
+input:focus::placeholder {
+  opacity: 0;
 }
 
 /* Theme Toggle Button */
@@ -44,9 +62,9 @@ button, button:hover, button:focus, button:active {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: none;
-    border: 2px solid var(--accent-color);
-    border-radius: 20px;
+    background: #1C1C1C;
+    border: 1px solid white;
+    border-radius: 16px;
     padding: 0;
     margin-bottom: 40px;
     top: 20px;
@@ -55,7 +73,7 @@ button, button:hover, button:focus, button:active {
 }
 
 #theme-toggle-btn svg {
-   fill: var(--accent-color);
+   fill: white;
 }
 
 #theme-toggle-btn svg:last-child {
@@ -74,7 +92,7 @@ button, button:hover, button:focus, button:active {
 #hero {
     width: 550px;
     margin: 64px auto;
-    padding: 115px 52px;
+    padding: 64px 40px;
     background: var(--color-bg);
     border: 2px solid var(--accent-color);
     border-radius: 16px;
@@ -94,7 +112,7 @@ h1 {
 }
 
 .green-text {
-    color: #4ADF86;
+    color: var(--color-green-text);
 }
 
 h2 {
@@ -102,21 +120,49 @@ h2 {
     line-height: 28px;
     font-weight: 400;
     font-family: Inter, sans-serif;
-    margin: 0 0 52px;
+    margin: 0 0 30px;
+}
+
+#password-filters {
+    margin-bottom: 30px;
+}
+
+#password-length-el {
+    background: #D1FAE5;
+    font-size: 20px;
+    color: var(--accent-color);
+    font-weight: 500;
+    line-height: 24px;
+    border: 1px solid #D1FAE5;
+    border-radius: 6px;
+    text-align: center;
+    padding: 8px 0;
+    width: 140px;
+}
+
+
+#password-length-el::placeholder {
+    font-size: 16px;
+    font-weight: 500;
+    font-style: italic;
+    color: rgba(39, 53, 73, 0.4);
 }
 
 .btn {
     border: 1px solid var(--accent-color);
     border-radius: 6px;
-    padding: 8px 16px;
     background-color: var(--accent-color);
     color: #FFFFFF;
     font-weight: 500;
+    line-height: 24px;
+    font-size: 16px;
     box-shadow: 0px 1px 2px 0px #0000000D;
 }
 
 #btn-el {
     margin-bottom: 35px;
+    width: 100%;
+    padding: 8px 16px;
 }
 
 #hero-description {
@@ -126,13 +172,13 @@ h2 {
 
 #hero-passwords {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
-    gap: 24px;
+    gap: 10px;
 }
 
 .generated-password {
-    flex: 0 1 50%;
+    flex: 1 1 50%;
     display: flex;
     justify-content: center;
     align-items: center;
