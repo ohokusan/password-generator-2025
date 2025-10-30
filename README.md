@@ -10,7 +10,7 @@ A simple web app for generating secure passwords.
 
 ## Features to Implement
 
-- [ ] Add dark/light theme toggle *(in progress)*
+- [x] **~~Add dark/light theme toggle~~**
 - [ ] Input field for desired password length
 - [ ] Toggle switches for including numbers and special characters
 - [ ] Click-to-copy functionality on the generated password

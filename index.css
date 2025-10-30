@@ -1,3 +1,20 @@
+/* CSS Variables for Theming */
+:root {
+    --accent-color: #10B981;
+}
+
+[data-theme="light"] {
+   --color-bg: #ECFDF5;
+   --color-fg: #2B283A;
+}
+
+[data-theme="dark"] {
+   --color-bg: #1F2937;
+   --color-fg: #FFFFFF;
+}
+
+/* Global Styles */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -14,11 +31,53 @@ body {
     font-style: normal;
 }
 
+button, button:hover, button:focus, button:active {
+    outline: none;
+    cursor: pointer;
+}
+
+/* Theme Toggle Button */
+
+#theme-toggle-btn {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: 2px solid var(--accent-color);
+    border-radius: 20px;
+    padding: 0;
+    margin-bottom: 40px;
+    top: 20px;
+    right: 20px;
+    position: absolute;
+}
+
+#theme-toggle-btn svg {
+   fill: var(--accent-color);
+}
+
+#theme-toggle-btn svg:last-child {
+    display: none;
+}
+
+[data-theme="light"] #theme-toggle-btn svg:first-child {
+    display: none;
+}
+
+[data-theme="light"] #theme-toggle-btn svg:last-child {
+    display: block;
+}
+
+/* Hero Section Styles */
 #hero {
     width: 550px;
     margin: 64px auto;
     padding: 115px 52px;
-    background: #1F2937;
+    background: var(--color-bg);
+    border: 2px solid var(--accent-color);
+    border-radius: 16px;
 }
 
 h1 {
@@ -31,7 +90,7 @@ h1 {
     font-size: 40px;
     letter-spacing: calc(-40px * 0.02);
     line-height: 40px;
-    color: white;
+    color: var(--color-fg);
 }
 
 .green-text {
@@ -46,16 +105,11 @@ h2 {
     margin: 0 0 52px;
 }
 
-button, button:hover, button:focus, button:active {
-    outline: none;
-    cursor: pointer;
-}
-
 .btn {
-    border: 1px solid #10B981;
+    border: 1px solid var(--accent-color);
     border-radius: 6px;
     padding: 8px 16px;
-    background-color: #10B981;
+    background-color: var(--accent-color);
     color: #FFFFFF;
     font-weight: 500;
     box-shadow: 0px 1px 2px 0px #0000000D;

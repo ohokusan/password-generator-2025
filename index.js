@@ -4,6 +4,8 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"
 let btnEl = document.getElementById("btn-el")
 let password1El = document.getElementById("password1-el")
 let password2El = document.getElementById("password2-el")
+let theme = "dark"
+
 
 btnEl.addEventListener("click", function() {
     password1El.textContent = generateRandomPassword()
@@ -15,6 +17,18 @@ btnEl.addEventListener("click", function() {
 //         navigator.clipboard.writeText(password1El.textContent);
 //     }
 // })
+
+// Add theme toggle functionality
+let btnThemeToogleEl = document.querySelector("[data-theme-toggle]");
+btnThemeToogleEl.addEventListener("click", function() {
+    if (theme === "dark") {
+        theme = "light";
+        document.querySelector("html").setAttribute("data-theme", theme);
+    } else {
+        theme = "dark";
+        document.querySelector("html").setAttribute("data-theme", theme);
+    }
+})
 
 function generateRandomPassword() {
     let randomPassword = ""
