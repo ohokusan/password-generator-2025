@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    background: #1C1C1C;
+    color: #D5D4D8;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#hero {
+    width: 550px;
+    margin: 64px auto;
+    padding: 115px 52px;
+    background: #1F2937;
+}
+
+h1 {
+    margin: 0 0 10px;
+    max-width: 354px;
+    font-family: "Karla", "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 40px;
+    letter-spacing: calc(-40px * 0.02);
+    line-height: 40px;
+    color: white;
+}
+
+.green-text {
+    color: #4ADF86;
+}
+
+h2 {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 400;
+    font-family: Inter, sans-serif;
+    margin: 0 0 52px;
+}
+
+button, button:hover, button:focus, button:active {
+    outline: none;
+    cursor: pointer;
+}
+
+.btn {
+    border: 1px solid #10B981;
+    border-radius: 6px;
+    padding: 8px 16px;
+    background-color: #10B981;
+    color: #FFFFFF;
+    font-weight: 500;
+    box-shadow: 0px 1px 2px 0px #0000000D;
+}
+
+#btn-el {
+    margin-bottom: 35px;
+}
+
+#hero-description {
+    border-bottom: 1px solid #2F3E53;
+    margin-bottom: 35px;
+}
+
+#hero-passwords {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 24px;
+}
+
+.generated-password {
+    flex: 0 1 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    background: #273549;
+    min-height: 40px;
+    color: #55F991;
+    line-height: 32px;
+}

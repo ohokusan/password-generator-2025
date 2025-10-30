@@ -1,0 +1,5 @@
+1. Add dark/light theme switch
+2. Input requesting desired password length
+3. Make numbers & special characters optional features
+4. Copy the password when click on the generated password el
+5. Ask GPT how to implement modern coding and make the app responsive
