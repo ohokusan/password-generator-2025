@@ -98,7 +98,7 @@ input:focus::placeholder {
 
 /* Hero Section Styles */
 #hero {
-    width: 550px;
+    max-width: 550px;
     margin: 64px auto;
     padding: 64px 40px;
     background: var(--color-bg);
@@ -148,7 +148,7 @@ h2 {
     border-radius: 6px;
     text-align: center;
     padding: 8px 0;
-    width: 140px; /* Remove after implementing other filters */
+    min-width: 140px; /* Remove after implementing other filters */
 }
 
 #password-length-el::placeholder {
@@ -201,4 +201,11 @@ h2 {
     min-height: 40px;
     color: #55F991;
     line-height: 32px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    #password-filters {
+        flex-direction: column;
+    }
 }

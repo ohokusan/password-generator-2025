@@ -32,11 +32,17 @@ btnEl.addEventListener("click", function() {
 })
 
 
-// password1El.addEventListener("click", function() {
-//     if (password1El.textContent != "") {
-//         navigator.clipboard.writeText(password1El.textContent);
-//     }
-// })
+password1El.addEventListener("click", function() {
+    if (password1El.textContent != "") {
+        navigator.clipboard.writeText(password1El.textContent);
+    }
+})
+
+password2El.addEventListener("click", function() {
+    if (password1El.textContent != "") {
+        navigator.clipboard.writeText(password2El.textContent);
+    }
+})
 
 // Add theme toggle functionality
 let btnThemeToogleEl = document.querySelector("[data-theme-toggle]");
