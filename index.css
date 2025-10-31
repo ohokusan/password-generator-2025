@@ -1,43 +1,50 @@
 /* CSS Variables for Theming */
 :root {
-    --accent-color: #10B981;
+  --accent-color: #10b981;
 }
 
 [data-theme="light"] {
-   --color-bg: #ECFDF5;
-   --color-fg: #2B283A;
-   --color-main-text: #6B7280;
-   --color-green-text: #10B981;
+  --color-bg: #ecfdf5;
+  --color-fg: #2b283a;
+  --color-main-text: #6b7280;
+  --color-green-text: #10b981;
 }
 
 [data-theme="dark"] {
-   --color-bg: #1F2937;
-   --color-fg: #FFFFFF;
-   --color-main-text: #D5D4D8;
-   --color-green-text: #4ADF86;
+  --color-bg: #1f2937;
+  --color-fg: #ffffff;
+  --color-main-text: #d5d4d8;
+  --color-green-text: #4adf86;
 }
 
 /* Global Styles */
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    height: 100vh;
-    background: #1C1C1C;
-    color: var(--color-main-text);
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+  height: 100vh;
+  background: #1c1c1c;
+  color: var(--color-main-text);
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
-button, button:hover, button:focus, button:active, input, input:hover, input:focus, input:active {
-    outline: none;
-    cursor: pointer;
+button,
+button:hover,
+button:focus,
+button:active,
+input,
+input:hover,
+input:focus,
+input:active {
+  outline: none;
+  cursor: pointer;
 }
 
 input[type="number"]::-webkit-outer-spin-button,
@@ -55,163 +62,165 @@ input:focus::placeholder {
 }
 
 .btn {
-    padding: 8px 16px;
-    border-radius: 6px;
-    font-weight: 500;
-    line-height: 24px;
-    font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  line-height: 24px;
+  font-size: 16px;
 }
 
 /* Theme Toggle Button */
 
 #theme-toggle-btn {
-    height: 50px;
-    width: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #1C1C1C;
-    border: 1px solid white;
-    border-radius: 16px;
-    padding: 0;
-    margin-bottom: 40px;
-    top: 20px;
-    right: 20px;
-    position: absolute;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1c1c1c;
+  border: 1px solid white;
+  border-radius: 16px;
+  padding: 0;
+  margin-bottom: 40px;
+  top: 20px;
+  right: 20px;
+  position: absolute;
 }
 
 #theme-toggle-btn svg {
-   fill: white;
+  fill: white;
 }
 
 #theme-toggle-btn svg:last-child {
-    display: none;
+  display: none;
 }
 
 [data-theme="light"] #theme-toggle-btn svg:first-child {
-    display: none;
+  display: none;
 }
 
 [data-theme="light"] #theme-toggle-btn svg:last-child {
-    display: block;
+  display: block;
 }
 
 /* Hero Section Styles */
 #hero {
-    max-width: 550px;
-    margin: 64px auto;
-    padding: 64px 40px;
-    background: var(--color-bg);
-    border: 2px solid var(--accent-color);
-    border-radius: 16px;
+  max-width: 550px;
+  margin: 64px auto;
+  padding: 64px 40px;
+  background: var(--color-bg);
+  border: 2px solid var(--accent-color);
+  border-radius: 16px;
 }
 
 h1 {
-    margin: 0 0 10px;
-    max-width: 354px;
-    font-family: "Karla", "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 800;
-    font-style: normal;
-    font-size: 40px;
-    letter-spacing: calc(-40px * 0.02);
-    line-height: 40px;
-    color: var(--color-fg);
+  margin: 0 0 10px;
+  max-width: 354px;
+  font-family: "Karla", "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 40px;
+  letter-spacing: calc(-40px * 0.02);
+  line-height: 40px;
+  color: var(--color-fg);
 }
 
 .green-text {
-    color: var(--color-green-text);
+  color: var(--color-green-text);
 }
 
 h2 {
-    font-size: 20px;
-    line-height: 28px;
-    font-weight: 400;
-    font-family: Inter, sans-serif;
-    margin: 0 0 30px;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 400;
+  font-family: Inter, sans-serif;
+  margin: 0 0 30px;
 }
 
 #password-filters {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 30px;
 }
 
 #password-length-el {
-    background: #D1FAE5;
-    font-size: 20px;
-    color: var(--accent-color);
-    font-weight: 500;
-    line-height: 24px;
-    border: 1px solid #D1FAE5;
-    border-radius: 6px;
-    text-align: center;
-    padding: 8px 0;
-    min-width: 140px; /* Remove after implementing other filters */
+  background: #d1fae5;
+  font-size: 20px;
+  color: var(--accent-color);
+  font-weight: 500;
+  line-height: 24px;
+  border: 1px solid #d1fae5;
+  border-radius: 6px;
+  text-align: center;
+  padding: 8px 0;
+  min-width: 140px; /* Remove after implementing other filters */
 }
 
 #password-length-el::placeholder {
-    font-size: 16px;
-    font-weight: 500;
-    font-style: italic;
-    color: rgba(39, 53, 73, 0.4);
+  font-size: 16px;
+  font-weight: 500;
+  font-style: italic;
+  color: rgba(39, 53, 73, 0.4);
 }
 
 .filter {
-    flex: 1 1 auto;
-    background: none;
-    border: 1px solid #718198;
-    color: #718198;
+  flex: 1 1 auto;
+  background: none;
+  border: 1px solid #718198;
+  color: #718198;
 }
 
-#password-length-el:focus, #password-length-el:active, .filter-active {
-   color: var(--accent-color);
-   border-color: var(--accent-color);
+#password-length-el:focus,
+#password-length-el:active,
+.filter-active {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 #btn-el {
-    border: 1px solid var(--accent-color);
-    background-color: var(--accent-color);
-    color: #FFFFFF;
-    box-shadow: 0px 1px 2px 0px #0000000D;
-    margin-bottom: 35px;
-    width: 100%;
+  border: 1px solid var(--accent-color);
+  background-color: var(--accent-color);
+  color: #ffffff;
+  box-shadow: 0px 1px 2px 0px #0000000d;
+  margin-bottom: 35px;
+  width: 100%;
 }
 
 #hero-description {
-    border-bottom: 1px solid #2F3E53;
-    margin-bottom: 35px;
+  border-bottom: 1px solid #2f3e53;
+  margin-bottom: 35px;
 }
 
 #hero-passwords {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
 }
 
 .generated-password {
-    flex: 1 1 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 6px;
-    background: #273549;
-    min-height: 40px;
-    color: #55F991;
-    line-height: 32px;
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  background: #273549;
+  min-height: 40px;
+  color: #55f991;
+  line-height: 32px;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 
 .copied {
-    border: 1px solid #55F991;
+  border: 1px solid #55f991;
 }
 
 @media only screen and (max-width: 600px) {
-    #password-filters {
-        flex-direction: column;
-    }
+  #password-filters {
+    flex-direction: column;
+  }
 }

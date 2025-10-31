@@ -110,10 +110,10 @@ for (let key in filtersStatus) {
 
 btnEl.addEventListener("click", function () {
   let passwordLength = parseInt(getPasswordLength());
-//   passwordLengthEl.value = "";
-console.log(passwordLengthEl.value)
+  //   passwordLengthEl.value = "";
+  console.log(passwordLengthEl.value);
   if (passwordLengthEl.value === "") {
-    passwordLengthEl.value = passwordLength
+    passwordLengthEl.value = passwordLength;
   }
   password1El.textContent = generateRandomPassword(passwordLength);
   password2El.textContent = generateRandomPassword(passwordLength);
