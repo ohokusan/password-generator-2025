@@ -15,4 +15,4 @@ A simple web app for generating secure passwords.
 - [x] *~~Toggle switches for including numbers and special characters~~*
 - [x] *~~Click-to-copy functionality on the generated password (ongoing)~~*
 - [x] *~~Consult GPT for modern, clean code practices and responsive design improvements~~*
-- [ ] Add temporary notification when passwords is copied
+- [x] *~~Add temporary notification when passwords is copied~~*
