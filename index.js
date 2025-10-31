@@ -9,8 +9,8 @@ let password2El = document.getElementById("password2-el")
 let theme = "dark"
 
 let filtersStatus = {
-    numbers: false,
-    specchars: true
+    numbers: true,
+    specchars: false
 }
 
 const filters = {
