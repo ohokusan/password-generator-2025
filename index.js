@@ -110,7 +110,11 @@ for (let key in filtersStatus) {
 
 btnEl.addEventListener("click", function () {
   let passwordLength = parseInt(getPasswordLength());
-  passwordLengthEl.value = "";
+//   passwordLengthEl.value = "";
+console.log(passwordLengthEl.value)
+  if (passwordLengthEl.value === "") {
+    passwordLengthEl.value = passwordLength
+  }
   password1El.textContent = generateRandomPassword(passwordLength);
   password2El.textContent = generateRandomPassword(passwordLength);
 });
@@ -177,7 +181,7 @@ function getPasswordLength() {
     passwordLengthEl.value > 20 ||
     passwordLengthEl.value < 5
   ) {
-    return 15;
+    return 12;
   } else {
     return passwordLengthEl.value;
   }
