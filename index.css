@@ -201,6 +201,9 @@ h2 {
     min-height: 40px;
     color: #55F991;
     line-height: 32px;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 }
 
 .copied {
